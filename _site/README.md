@@ -16,7 +16,7 @@
 
 ## 效果预览
 
-**[在线预览 &rarr;](https://able615.github.io)**
+**[在线预览 &rarr;](https://baxibaba.github.io)**
 
 ![home](/images/posts/ddns/markdown-img-paste-20180118142307105.png)
 

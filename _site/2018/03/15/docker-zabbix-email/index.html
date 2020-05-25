@@ -141,7 +141,7 @@
 
 <p>网上大部分资料都是从创建一个 mariadb 数据库开始的：</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker rm <span class="nt">-f</span> zabbix-db
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker <span class="nb">rm</span> <span class="nt">-f</span> zabbix-db
 
 <span class="nv">$ </span>docker run <span class="nt">-d</span> <span class="nt">--name</span> zabbix-db <span class="nt">-p</span> 5000:3306 <span class="nt">--restart</span><span class="o">=</span>always <span class="se">\</span>
   <span class="nt">--env</span><span class="o">=</span><span class="s2">"MARIADB_USER=设置一个库用户名"</span> <span class="se">\</span>
@@ -219,7 +219,7 @@ Showing DB status...
 <span class="nt">--------------</span>
 mysql  Ver 15.1 Distrib 10.0.32-MariaDB, <span class="k">for </span>Linux <span class="o">(</span>x86_64<span class="o">)</span> using readline 5.1
 
-Connection id:          6
+Connection <span class="nb">id</span>:          6
 Current database:
 Current user:           root@127.0.0.1
 SSL:                    Not <span class="k">in </span>use
@@ -325,7 +325,7 @@ Zabbix server is the central process of Zabbix software.</p>
 
 <p>Zabbix server 是此套监控的服务端，核心组件。</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker rm <span class="nt">-f</span> zabbix-server
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker <span class="nb">rm</span> <span class="nt">-f</span> zabbix-server
 
 <span class="nv">$ </span>docker run  <span class="nt">--name</span> zabbix-server <span class="nt">--hostname</span> zabbix-server <span class="se">\</span>
 <span class="nt">--link</span> zabbix-db:mysql <span class="se">\</span>
@@ -364,7 +364,7 @@ zabbix/zabbix-web-nginx-mysql:3.4.5
 
 <p>Zabbix server Default credentials: Admin/zabbix</p>
 
-<p>在容器起来以后，可以通过 <code class="highlighter-rouge">http://172.20.32.44:8000</code>（此处IP地址为容器所在宿主机IP，需要改成自己环境的） 访问 zabbix 的 web 界面了：</p>
+<p>在容器起来以后，可以通过 <code class="language-plaintext highlighter-rouge">http://172.20.32.44:8000</code>（此处IP地址为容器所在宿主机IP，需要改成自己环境的） 访问 zabbix 的 web 界面了：</p>
 
 <p><img src="/images/posts/zabbix/markdown-img-paste-20180323151202889.png" alt="zabbix22" /></p>
 
@@ -380,7 +380,7 @@ zabbix/zabbix-web-nginx-mysql:3.4.5
 
 <p>经过初步验证，发现直接使用已搭建好的 mysql 数据库也是可以的，这样数据就比较集中，也不用操心数据备份的事情的，数据库备份策略会统一做。</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rm <span class="nt">-f</span> zabbix-mysql
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nb">rm</span> <span class="nt">-f</span> zabbix-mysql
 
 docker run <span class="nt">--name</span> zabbix-mysql <span class="nt">--hostname</span> zabbix-mysql <span class="se">\</span>
 <span class="nt">-e</span> <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span><span class="s2">"库的root密码"</span> <span class="se">\</span>
@@ -411,7 +411,7 @@ docker run <span class="nt">--name</span> zabbix-mysql <span class="nt">--hostna
 
 <p>在每个客户端运行：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker rm -f zabbix-agent
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker rm -f zabbix-agent
 
 $ docker run --name zabbix-agent \
 --net=host \
@@ -510,9 +510,9 @@ Current problem status is <span class="o">{</span>EVENT.STATUS<span class="o">}<
 
 <span class="nv">$ </span><span class="nb">cd</span> /usr/src/sendEmail-v1.56
 
-<span class="nv">$ </span>cp <span class="nt">-a</span> sendEmail /usr/local/bin
+<span class="nv">$ </span><span class="nb">cp</span> <span class="nt">-a</span> sendEmail /usr/local/bin
 
-<span class="nv">$ </span>chmod +x /usr/local/bin/sendEmail
+<span class="nv">$ </span><span class="nb">chmod</span> +x /usr/local/bin/sendEmail
 
 <span class="c"># 测试邮件功能</span>
 <span class="nv">$ </span>/usr/local/bin/sendEmail <span class="se">\</span>
@@ -528,7 +528,7 @@ Current problem status is <span class="o">{</span>EVENT.STATUS<span class="o">}<
   <span class="nt">-m</span> <span class="s2">"我是邮件内容"</span>
 
 <span class="c"># 增加自定义警告发送脚本</span>
-<span class="nv">$ </span> tee /usr/local/share/zabbix/alertscripts/sendEmail.sh <span class="o">&lt;&lt;-</span><span class="sh">'</span><span class="no">EOF</span><span class="sh">'
+<span class="nv">$ </span> <span class="nb">tee</span> /usr/local/share/zabbix/alertscripts/sendEmail.sh <span class="o">&lt;&lt;-</span><span class="sh">'</span><span class="no">EOF</span><span class="sh">'
 #!/bin/bash
 
 to=</span><span class="nv">$1</span><span class="sh">
@@ -536,21 +536,21 @@ subject=</span><span class="nv">$2</span><span class="sh">
 body=</span><span class="nv">$3</span><span class="sh">
 
 /usr/local/bin/sendEmail  
-  -f 你的邮件账号 \
+  -f 你的邮件账号 </span><span class="se">\</span><span class="sh">
   -t "</span><span class="nv">$to</span><span class="sh">"
-  -s 你的邮件服务器 \
+  -s 你的邮件服务器 </span><span class="se">\</span><span class="sh">
   -u "</span><span class="nv">$subject</span><span class="sh">"
-  -o message-content-type=html \
-  -o message-charset=utf8 \
-  -o tls=no \
-  -xu 你的邮件账号 \
-  -xp 这里是密码 \
+  -o message-content-type=html </span><span class="se">\</span><span class="sh">
+  -o message-charset=utf8 </span><span class="se">\</span><span class="sh">
+  -o tls=no </span><span class="se">\</span><span class="sh">
+  -xu 你的邮件账号 </span><span class="se">\</span><span class="sh">
+  -xp 这里是密码 </span><span class="se">\</span><span class="sh">
   -m "</span><span class="nv">$body</span><span class="sh">"
 </span><span class="no">EOF
 
-</span><span class="nv">$ </span>chmod +x /usr/local/share/zabbix/alertscripts/sendEmail.sh
+</span><span class="nv">$ </span><span class="nb">chmod</span> +x /usr/local/share/zabbix/alertscripts/sendEmail.sh
 
-<span class="nv">$ </span>chown zabbix.zabbix /usr/local/share/zabbix/alertscripts/sendEmail.sh
+<span class="nv">$ </span><span class="nb">chown </span>zabbix.zabbix /usr/local/share/zabbix/alertscripts/sendEmail.sh
 </code></pre></div></div>
 
 <p>然后按照教程一步步在管理界面配置就能成功，需要一些耐心。</p>
@@ -671,7 +671,7 @@ Configuration–Templates–Template OS Linux–Discovery–Network interface di
 
 <hr />
 
-<p><strong>转载</strong>请注明出处，本文采用 <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">CC4.0</a> 协议授权，版权归 <a href="https://able615.github.io">able615</a> 所有。</p>
+<p><strong>转载</strong>请注明出处，本文采用 <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">CC4.0</a> 协议授权，版权归 <a href="https://baxibaba.github.io">baxibaba</a> 所有。</p>
 
     </article>
     <div class="share">
@@ -752,7 +752,7 @@ SimpleJekyllSearch({
     <footer class="container">
         <div class="site-footer" role="contentinfo">
             <div class="copyright left mobile-block">
-                    © 2015
+                    © 2020
                     <span title="Wanbao Chen">Wanbao Chen</span>
                     <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
             </div>
@@ -762,7 +762,7 @@ SimpleJekyllSearch({
                     <a href="javascript:window.scrollTo(0,0)" >TOP</a>
                 </li>
             </ul>
-            <a href="http://github.com/able615/able615.github.io" target="_blank" aria-label="view source code">
+            <a href="https://github.com/able615/able615.github.io" target="_blank" aria-label="view source code">
                 <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
             </a>
             <ul class="site-footer-links mobile-hidden">

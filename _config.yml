@@ -18,8 +18,8 @@ author: Wanbao Chen
 organization: wonhigh
 organization_url: ''
 github_username: baxibaba
-location: Shenzhen, China
-email: liuyw166@gmail.com
+location: Beijing, China
+email: diego.baxibaba@gmail.com
 
 # ---------------- #
 #    Navigation    #
@@ -76,7 +76,7 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-repository: able615/able615.github.io
+repository: baxibaba/baxibaba.github.io
 
 # ---------------- #
 #      Comments    #

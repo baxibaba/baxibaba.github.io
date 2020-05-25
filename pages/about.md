@@ -2,13 +2,13 @@
 layout: page
 title: About
 description: 程序人生
-keywords: Yuewu Liu, able615, able, liuyw
+keywords: Yuewu Liu, baxibaba, able, liuyw
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是able615，目前在研究、分享开源技术。
+我是baxibaba，目前在研究、分享开源技术。
 
 坚信熟能生巧，技术改变人生。
 
