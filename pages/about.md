@@ -2,7 +2,7 @@
 layout: page
 title: About
 description: 程序人生
-keywords: Yuewu Liu, baxibaba, able, liuyw
+keywords: Yuewu Liu, baxibaba, able, baxi
 comments: true
 menu: 关于
 permalink: /about/

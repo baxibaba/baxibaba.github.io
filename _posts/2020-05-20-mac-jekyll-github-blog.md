@@ -61,30 +61,30 @@ $ sudo jekyll new baxibabablog
 ```
 安装过程会显示一堆安装内容，关注最后一行
 ``` python
-New jekyll site installed in /Users/liuyw/baxibabablog.
+New jekyll site installed in /Users/baxi/baxibabablog.
 ```
 
 ## 5、本地启动博客
 进入到安装目录执行命令
 ```python
-$ cd /Users/liuyw/baxibabablog
+$ cd /Users/baxi/baxibabablog
 $ sudo jekyll serve
 ```
 输出
 ``` python
 Password:
-Configuration file: /Users/liuyw/baxibabablog/_config.yml
-            Source: /Users/liuyw/baxibabablog
-       Destination: /Users/liuyw/baxibabablog/_site
+Configuration file: /Users/baxi/baxibabablog/_config.yml
+            Source: /Users/baxi/baxibabablog
+       Destination: /Users/baxi/baxibabablog/_site
  Incremental build: disabled. Enable with --incremental
       Generating...
                     done in 0.415 seconds.
- Auto-regeneration: enabled for '/Users/liuyw/baxibabablog'
+ Auto-regeneration: enabled for '/Users/baxi/baxibabablog'
     Server address: http://127.0.0.1:4000/
   Server running... press ctrl-c to stop.
 ```
 将http://127.0.0.1:4000/复制到浏览器，能打开就表示正常了。
-![images](https://i.loli.net/2018/01/16/5a5d4f905427d.png)
+![WX20200525-173904.png](https://i.loli.net/2020/05/25/9wAstdqeESUZQRP.png)
 
 ## 6、部署到github
 &emsp;&emsp;按照自己的github账号创建一个仓库,固定格式username.github.io，这个代码仓库就是博客源码存放地，博客公网链接就是：https://baxibaba.github.io
@@ -93,7 +93,7 @@ https://github.com/baxibaba/baxibaba.github.io.git
 ```
 将本地内容和github上的仓库关联
 ``` python
-1 $ cd /Users/liuyw/baxibabablog
+1 $ cd /Users/baxi/baxibabablog
 2 $ sudo git init
 3 $ sudo git add .
 4 $ sudo git commit -m "first commit"
@@ -143,7 +143,7 @@ $ git clone https://github.com/baxibaba/baxibaba.github.io.git
 运行方法和步骤5是一样的，只是我在本地运行获取到的主题框架时遇到了报错
 
 ``` python
-$ cd /Users/liuyw/my_git/baxibaba.github.io
+$ cd /Users/baxi/my_git/baxibaba.github.io
 $ sudo jekyll serve         
 Traceback (most recent call last):
         10: from /usr/local/bin/jekyll:23:in `<main>'
@@ -160,19 +160,20 @@ Traceback (most recent call last):
 ```
 
 看提示大概是gem软件版本方面的问题，网上找到用bundle exec来启动的，试了下果然能成功
+如果项目启动报错：缺啥插件下啥插件，提示 jekyll 版本不对可以使用 bundle update 来更新 
 
 ``` sh
 $ bundle exec jekyll serve --watch
-Configuration file: /Users/liuyw/my_git/baxibaba.github.io/_config.yml
+Configuration file: /Users/baxi/my_git/baxibaba.github.io/_config.yml
        Deprecation: The 'gems' configuration option has been renamed to 'plugins'. Please update your config file accordingly.
-            Source: /Users/liuyw/my_git/baxibaba.github.io
-       Destination: /Users/liuyw/my_git/baxibaba.github.io/_site
+            Source: /Users/baxi/my_git/baxibaba.github.io
+       Destination: /Users/baxi/my_git/baxibaba.github.io/_site
  Incremental build: disabled. Enable with --incremental
       Generating...
    GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.
     Liquid Warning: Liquid syntax error (line 2): Expected dotdot but found pipe in "{{(site.github.public_repositories | sort: 'stargazers_count') | reverse }}" in pages/open-source.md
                     done in 3.437 seconds.
- Auto-regeneration: enabled for '/Users/liuyw/my_git/baxibaba.github.io'
+ Auto-regeneration: enabled for '/Users/baxi/my_git/baxibaba.github.io'
     Server address: http://127.0.0.1:4000
   Server running... press ctrl-c to stop.
 ```
@@ -227,7 +228,7 @@ A           www         默认              151.101.229.147
 ```
 记录值填写刚才获得的ip地址，在博客根目录添加CNAME文件,并将你的域名写入:
 ```
-echo "www.ttbrook.com" > CNAME
+echo "www.baxibaba.com" > CNAME
 ```
 
 将CNAME提交，待域名解析完成，就可以了（大概1分钟解析时间）。

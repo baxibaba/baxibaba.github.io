@@ -1,6 +1,6 @@
 # 博客模板
 
-我的个人博客：<http://www.ttbrook.com>，欢迎 Star 和 Fork。
+我的个人博客：<https://baxibaba.github.io/>，欢迎 Star 和 Fork。
 
 ## 概览
 
