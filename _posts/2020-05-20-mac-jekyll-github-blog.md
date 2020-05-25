@@ -161,6 +161,7 @@ Traceback (most recent call last):
 
 看提示大概是gem软件版本方面的问题，网上找到用bundle exec来启动的，试了下果然能成功
 如果项目启动报错：缺啥插件下啥插件，提示 jekyll 版本不对可以使用 bundle update 来更新 
+使用 sudo bundle exec jekyll serve
 
 ``` sh
 $ bundle exec jekyll serve --watch
