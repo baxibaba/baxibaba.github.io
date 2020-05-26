@@ -18,14 +18,14 @@ mathjax: true
 ### 超链接
 
 ```
-[靠谱-ing](http://mazhuang.org)
+[靠谱-ing](https://baxibaba.github.io/)
 
-<http://mazhuang.org>
+<https://baxibaba.github.io/>
 ```
 
-[靠谱-ing](http://mazhuang.org)  
+[靠谱-ing](https://baxibaba.github.io/)  
 
-<http://mazhuang.org>
+<https://baxibaba.github.io/>
 
 ### 列表
 
