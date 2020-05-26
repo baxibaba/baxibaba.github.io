@@ -87,6 +87,12 @@
     } ,
   
     {
+      "title"    : "总结!",
+      "category" : "私有",
+      "url"      : "http://localhost:4000/2020/05/26/%E6%80%BB%E7%BB%93/"
+    } ,
+  
+    {
       "title"    : "Mac OS X",
       "category" : "Mac",
       "url"      : "http://localhost:4000/wiki/mac/"
