@@ -18,7 +18,7 @@
 
 **[在线预览 &rarr;](https://baxibaba.github.io)**
 
-![home](/images/posts/ddns/markdown-img-paste-20180118142307105.png)
+![WX20200527-113252@2x.png](https://i.loli.net/2020/05/27/yX54sV7DALcSNbO.png)
 
 ## Fork 指南
 
