@@ -112,7 +112,7 @@ $ git clone https://github.com/baxibaba/baxibaba.github.io.git
 ```
 &emsp;&emsp;刚拿到的主题，内容还是别人的，我们需要了解一下博客的[基本目录结构](https://www.jekyll.com.cn/)，然后加以修改成自己的博客框架。
 
-![images](https://i.loli.net/2018/01/16/5a5d478c4d622.png)
+![1591254493711.jpg](https://i.loli.net/2020/06/04/Wbhv19f2sYZ7XeB.jpg)
 
 1. 修改域名
 
@@ -186,7 +186,7 @@ Configuration file: /Users/baxi/my_git/baxibaba.github.io/_config.yml
 
 在_posts下建立文件或者拷贝过来
 ```
-2018-01-06-mac-jekyll-github-blog.md
+2020-05-20-mac-jekyll-github-blog.md
 ```
 
 文章的开头，需要参照默认模板template
