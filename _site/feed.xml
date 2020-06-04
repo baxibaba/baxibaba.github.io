@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-04T16:03:50+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Diego.blog</title><subtitle>Diego的个人博客</subtitle><author><name>Wanbao Chen</name></author><entry><title type="html">react-express-mongodb</title><link href="http://localhost:4000/2020/06/04/react-express-mongodb/" rel="alternate" type="text/html" title="react-express-mongodb" /><published>2020-06-04T00:00:00+08:00</published><updated>2020-06-04T00:00:00+08:00</updated><id>http://localhost:4000/2020/06/04/%20react-express-mongodb</id><content type="html" xml:base="http://localhost:4000/2020/06/04/react-express-mongodb/">&lt;h2 id=&quot;1创建初始化react项目-使用cli&quot;&gt;1、创建初始化react项目 使用cli&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-04T16:06:43+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Diego.blog</title><subtitle>Diego的个人博客</subtitle><author><name>Wanbao Chen</name></author><entry><title type="html">react-express-mongodb</title><link href="http://localhost:4000/2020/06/04/react-express-mongodb/" rel="alternate" type="text/html" title="react-express-mongodb" /><published>2020-06-04T00:00:00+08:00</published><updated>2020-06-04T00:00:00+08:00</updated><id>http://localhost:4000/2020/06/04/%20react-express-mongodb</id><content type="html" xml:base="http://localhost:4000/2020/06/04/react-express-mongodb/">&lt;h2 id=&quot;1创建初始化react项目-使用cli&quot;&gt;1、创建初始化react项目 使用cli&lt;/h2&gt;
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   npx create-react-app my-app
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h2 id=&quot;2安装antd-mobile&quot;&gt;2、安装antd-mobile&lt;/h2&gt;
@@ -393,7 +393,57 @@ A           www         默认              151.101.229.147
 &lt;p&gt;https://sm.ms/&lt;/p&gt;
 
 &lt;h2 id=&quot;2喜欢平台免&quot;&gt;2、喜欢平台【免】&lt;/h2&gt;
-&lt;p&gt;https://xclient.info/&lt;/p&gt;</content><author><name>Wanbao Chen</name></author><summary type="html">1、免费图床 https://sm.ms/</summary></entry><entry><title type="html">Mac 中安装、使用 git 和 Sourcetree</title><link href="http://localhost:4000/2018/02/26/mac-git-sourcetree/" rel="alternate" type="text/html" title="Mac 中安装、使用 git 和 Sourcetree" /><published>2018-02-26T00:00:00+08:00</published><updated>2018-02-26T00:00:00+08:00</updated><id>http://localhost:4000/2018/02/26/mac-git-sourcetree</id><content type="html" xml:base="http://localhost:4000/2018/02/26/mac-git-sourcetree/">&lt;h2 id=&quot;git安装&quot;&gt;git安装&lt;/h2&gt;
+&lt;p&gt;https://xclient.info/&lt;/p&gt;</content><author><name>Wanbao Chen</name></author><summary type="html">1、免费图床 https://sm.ms/</summary></entry><entry><title type="html">在 Mac 上安装软件</title><link href="http://localhost:4000/2020/05/10/mac-install-soft/" rel="alternate" type="text/html" title="在 Mac 上安装软件" /><published>2020-05-10T00:00:00+08:00</published><updated>2020-05-10T00:00:00+08:00</updated><id>http://localhost:4000/2020/05/10/mac-install-soft</id><content type="html" xml:base="http://localhost:4000/2020/05/10/mac-install-soft/">&lt;h2 id=&quot;在app-store安装软件&quot;&gt;在App store安装软件&lt;/h2&gt;
+&lt;p&gt;这个最简单，找到软件，点获取就可以，前提是注册个苹果账户，很多软件是付费的。&lt;/p&gt;
+&lt;h2 id=&quot;安装dmg程序&quot;&gt;安装.dmg程序&lt;/h2&gt;
+&lt;p&gt;Mac系统的安装文件后缀名是.dmg,  双击打开后，会出现一个安装对话框， 把图标拖拽到Application中就可以了,如果是版本升级，也可以如此操作，拖进去后选择一下替换就行。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/mac/markdown-img-paste-20180302150418632.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;使用brew在mac上安装软件&quot;&gt;使用brew在Mac上安装软件&lt;/h2&gt;
+&lt;p&gt;brew全名叫Homebrew，是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件， 只需要一个命令， 非常方便。
+brew类似centos的yum或者ubuntu的apt-get&lt;/p&gt;
+&lt;h2 id=&quot;安装brew&quot;&gt;安装brew&lt;/h2&gt;
+&lt;p&gt;在官方网站： http://brew.sh/   有对brew用法详细描述&lt;/p&gt;
+
+&lt;p&gt;安装方法：在Mac中打开终端输入命令：&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;usr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ruby&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install )&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/mac/markdown-img-paste-2018030214452936.png&quot; alt=&quot;a2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;下载安装完成大概20分钟（100M电信光纤实测）&lt;/p&gt;
+
+&lt;h2 id=&quot;使用brew安装软件&quot;&gt;使用brew安装软件&lt;/h2&gt;
+&lt;p&gt;安装git,一键搞定，是不是很爽&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;git&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;再安装个wget&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wget&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;使用brew卸载软件&quot;&gt;使用brew卸载软件&lt;/h2&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uninstall&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wget&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/mac/markdown-img-paste-20180302144649433.png&quot; alt=&quot;a3&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;使用brew查询软件&quot;&gt;使用brew查询软件&lt;/h2&gt;
+&lt;p&gt;不知道软件的准确名字，先搜索查询一下
+比如要安装&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;search&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;/wge*/是正则表达式，星号要包含在/内&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/mac/markdown-img-paste-20180302144751884.png&quot; alt=&quot;a4&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;其它brew命令&quot;&gt;其它brew命令&lt;/h2&gt;
+&lt;p&gt;brew list     列出己安装软件&lt;/p&gt;
+
+&lt;p&gt;brew update   更新brew&lt;/p&gt;
+
+&lt;p&gt;brew home     用语浏览器打开brew官网&lt;/p&gt;
+
+&lt;p&gt;brew info     显示软件信息&lt;/p&gt;
+
+&lt;p&gt;brew deps     显示包依赖&lt;/p&gt;</content><author><name>Wanbao Chen</name></author><summary type="html">在App store安装软件 这个最简单，找到软件，点获取就可以，前提是注册个苹果账户，很多软件是付费的。 安装.dmg程序 Mac系统的安装文件后缀名是.dmg, 双击打开后，会出现一个安装对话框， 把图标拖拽到Application中就可以了,如果是版本升级，也可以如此操作，拖进去后选择一下替换就行。</summary></entry><entry><title type="html">Mac 中安装、使用 git 和 Sourcetree</title><link href="http://localhost:4000/2018/02/26/mac-git-sourcetree/" rel="alternate" type="text/html" title="Mac 中安装、使用 git 和 Sourcetree" /><published>2018-02-26T00:00:00+08:00</published><updated>2018-02-26T00:00:00+08:00</updated><id>http://localhost:4000/2018/02/26/mac-git-sourcetree</id><content type="html" xml:base="http://localhost:4000/2018/02/26/mac-git-sourcetree/">&lt;h2 id=&quot;git安装&quot;&gt;git安装&lt;/h2&gt;
 &lt;p&gt;1、&lt;a href=&quot;https://git-scm.com/&quot;&gt;git官网&lt;/a&gt;下载dmg文件直接安装&lt;/p&gt;
 
 &lt;p&gt;2、用brew install git安装&lt;/p&gt;
@@ -487,54 +537,4 @@ Are you sure you want to continue connecting (yes/no)? yes
 
 &lt;p&gt;有很多工程项目的时候，可以在sourcetree里建立分组文件夹，加以区分，会清晰很多，形如这样的就很好：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/mac/markdown-img-paste-20180302163956748.png&quot; alt=&quot;aa1&quot; /&gt;&lt;/p&gt;</content><author><name>Wanbao Chen</name></author><summary type="html">git安装 1、git官网下载dmg文件直接安装</summary></entry><entry><title type="html">在 Mac 上安装软件</title><link href="http://localhost:4000/2018/02/06/mac-install-soft/" rel="alternate" type="text/html" title="在 Mac 上安装软件" /><published>2018-02-06T00:00:00+08:00</published><updated>2018-02-06T00:00:00+08:00</updated><id>http://localhost:4000/2018/02/06/mac-install-soft</id><content type="html" xml:base="http://localhost:4000/2018/02/06/mac-install-soft/">&lt;h2 id=&quot;在app-store安装软件&quot;&gt;在App store安装软件&lt;/h2&gt;
-&lt;p&gt;这个最简单，找到软件，点获取就可以，前提是注册个苹果账户，很多软件是付费的。&lt;/p&gt;
-&lt;h2 id=&quot;安装dmg程序&quot;&gt;安装.dmg程序&lt;/h2&gt;
-&lt;p&gt;Mac系统的安装文件后缀名是.dmg,  双击打开后，会出现一个安装对话框， 把图标拖拽到Application中就可以了,如果是版本升级，也可以如此操作，拖进去后选择一下替换就行。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/posts/mac/markdown-img-paste-20180302150418632.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;使用brew在mac上安装软件&quot;&gt;使用brew在Mac上安装软件&lt;/h2&gt;
-&lt;p&gt;brew全名叫Homebrew，是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件， 只需要一个命令， 非常方便。
-brew类似centos的yum或者ubuntu的apt-get&lt;/p&gt;
-&lt;h2 id=&quot;安装brew&quot;&gt;安装brew&lt;/h2&gt;
-&lt;p&gt;在官方网站： http://brew.sh/   有对brew用法详细描述&lt;/p&gt;
-
-&lt;p&gt;安装方法：在Mac中打开终端输入命令：&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;usr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ruby&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install )&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/images/posts/mac/markdown-img-paste-2018030214452936.png&quot; alt=&quot;a2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;下载安装完成大概20分钟（100M电信光纤实测）&lt;/p&gt;
-
-&lt;h2 id=&quot;使用brew安装软件&quot;&gt;使用brew安装软件&lt;/h2&gt;
-&lt;p&gt;安装git,一键搞定，是不是很爽&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;git&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;再安装个wget&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wget&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;使用brew卸载软件&quot;&gt;使用brew卸载软件&lt;/h2&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uninstall&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wget&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/images/posts/mac/markdown-img-paste-20180302144649433.png&quot; alt=&quot;a3&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;使用brew查询软件&quot;&gt;使用brew查询软件&lt;/h2&gt;
-&lt;p&gt;不知道软件的准确名字，先搜索查询一下
-比如要安装&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;search&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*/&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;/wge*/是正则表达式，星号要包含在/内&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/posts/mac/markdown-img-paste-20180302144751884.png&quot; alt=&quot;a4&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;其它brew命令&quot;&gt;其它brew命令&lt;/h2&gt;
-&lt;p&gt;brew list     列出己安装软件&lt;/p&gt;
-
-&lt;p&gt;brew update   更新brew&lt;/p&gt;
-
-&lt;p&gt;brew home     用语浏览器打开brew官网&lt;/p&gt;
-
-&lt;p&gt;brew info     显示软件信息&lt;/p&gt;
-
-&lt;p&gt;brew deps     显示包依赖&lt;/p&gt;</content><author><name>Wanbao Chen</name></author><summary type="html">在App store安装软件 这个最简单，找到软件，点获取就可以，前提是注册个苹果账户，很多软件是付费的。 安装.dmg程序 Mac系统的安装文件后缀名是.dmg, 双击打开后，会出现一个安装对话框， 把图标拖拽到Application中就可以了,如果是版本升级，也可以如此操作，拖进去后选择一下替换就行。</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/images/posts/mac/markdown-img-paste-20180302163956748.png&quot; alt=&quot;aa1&quot; /&gt;&lt;/p&gt;</content><author><name>Wanbao Chen</name></author><summary type="html">git安装 1、git官网下载dmg文件直接安装</summary></entry></feed>
