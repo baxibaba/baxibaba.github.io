@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Links &mdash; Diego.blog</title>
+    <title>vue watch &mdash; Diego.blog</title>
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
@@ -21,26 +21,28 @@
     
 
     
-    <link rel="canonical" href="http://localhost:4000/links/">
+    <link rel="canonical" href="http://localhost:4000/2020/06/23/vue-watch/">
     <link rel="alternate" type="application/atom+xml" title="Diego.blog" href="http://localhost:4000/feed.xml">
     <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
     
-    <meta property="og:title" content="Links">
+    <meta property="og:title" content="vue watch">
       
-    <meta name="keywords" content="友情链接">
-    <meta name="og:keywords" content="友情链接">
+    <meta name="keywords" content="js">
+    <meta name="og:keywords" content="js">
       
-    <meta name="description" content="没有链接的博客是孤独的">
-    <meta name="og:description" content="没有链接的博客是孤独的">
+    <meta name="description" content="根据 watch 的 api，我们需要了解三个地方">
+    <meta name="og:description" content="根据 watch 的 api，我们需要了解三个地方">
       
     
     
         
     
-    <meta property="og:url" content="http://localhost:4000/links/">
+    <meta property="og:url" content="http://localhost:4000/2020/06/23/vue-watch/">
     <meta property="og:site_name" content="Diego.blog">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN" />
+    
+    <meta property="article:published_time" content="2020-06-23">
     
     <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="http://localhost:4000/assets/js/jquery-ui.js"></script>
@@ -72,7 +74,7 @@
                 
                 <a href="http://localhost:4000/wiki/" class=" site-header-nav-item" target="" title="维基">维基</a>
                 
-                <a href="http://localhost:4000/links/" class=" selected  site-header-nav-item" target="" title="链接">链接</a>
+                <a href="http://localhost:4000/links/" class=" site-header-nav-item" target="" title="链接">链接</a>
                 
                 <a href="http://localhost:4000/about/" class=" site-header-nav-item" target="" title="关于">关于</a>
                 
@@ -81,30 +83,109 @@
     </header>
     <!-- / header -->
 
-    <section class="collection-head small geopattern" data-pattern-id="Links">
-    <div class="container">
-        <div class="collection-title">
-            <h1 class="collection-header">Links</h1>
-            
+    <section class="collection-head small geopattern" data-pattern-id="vue watch">
+<div class="container">
+  <div class="columns">
+    <div class="column three-fourths">
+      <div class="collection-title">
+        <h1 class="collection-header">vue watch</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2020/06/23
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#js" title="js">js</a>
+          </span>
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#vue" title="vue">vue</a>
+          </span>
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#," title=",">,</a>
+          </span>
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#JS," title="JS,">JS,</a>
+          </span>
+          
         </div>
+      </div>
     </div>
+  </div>
+</div>
 </section>
 <!-- / .banner -->
- <section class="container content">
-        <div class="columns">
-            <div class="column two-thirds" >
-                <article class="article-content markdown-body">
-                    <blockquote>
-  <p>God made relatives. Thank God we can choose our friends.</p>
-</blockquote>
+<section class="container content">
+<div class="columns">
+  <div class="column three-fourths" >
+    <article class="article-content markdown-body">
+    <h2 id="根据-watch-的-api我们需要了解三个地方">根据 watch 的 api，我们需要了解三个地方</h2>
+
+<ul>
+  <li>1、监听的数据改变的时，watch 如何工作</li>
+  <li>2、设置 immediate 时，watch 如何工作</li>
+  <li>3、设置了 deep 时，watch 如何工作</li>
+</ul>
+
+<h2 id="响应式">响应式</h2>
+<p>Vue 会把数据设置响应式，既是设置他的 get 和 set当数据被读取get被触发，然后收集到读取他的东西，保存到依赖收集器，当数据被改变，set 被触发，然后通知曾经读取他的东西进行更新</p>
+
+<h3 id="监听的数据改变的时watch-如何工作">监听的数据改变的时，watch 如何工作</h3>
+<p>watch 在一开始初始化的时候，会 读取 一遍 监听的数据的值，于是，此时 那个数据就收集到 watch 的 watcher 了
+然后 你给 watch 设置的 handler ，watch 会放入 watcher 的更新函数中当数据改变时，通知 watch 的 watcher 进行更新，于是 你设置的 handler 就被调用了</p>
+
+<h3 id="设置-immediate即时-时watch-如何工作">设置 immediate（即时） 时，watch 如何工作</h3>
+
+<p>当你设置了 immediate 时，就不需要在 数据改变的时候 才会触发。
+而是在 初始化 watch 时，在读取了 监听的数据的值 之后，便立即调用一遍你设置的监听回调，然后传入刚读取的值</p>
+
+<h3 id="设置了-deep-时-watch-如何工作">设置了 deep 时， watch 如何工作</h3>
+
+<p>我们都知道 watch 有一个 deep 选项，是用来深度监听的。什么是深度监听呢？就是当你监听的属性的值是一个对象的时候，如果你没有设置深度监听，当对象内部变化时，你监听的回调是不会被触发的</p>
+
+<p>在说明这个之前，请大家先了解一下</p>
+
+<p>当你使用 Object.defineProperty 给 【值是对象的属性】 设置 set 和 get 的时候</p>
+
+<ul>
+  <li>
+    <p>1、如果你直接改变或读取这个属性 ( 直接赋值 )，可以触发这个属性的设置的 set 和 get</p>
+  </li>
+  <li>
+    <p>2、但是你改变或读取它内部的属性，get 和 set 不会被触发的</p>
+  </li>
+</ul>
+
+<h3 id="不设置-deep">不设置 deep</h3>
+<ul>
+  <li>1、因为读取了监听的 data 的属性，watch 的 watcher 被收集在 这个属性的 收集器中</li>
+</ul>
+
+<h3 id="设置了-deep">设置了 deep</h3>
+<ul>
+  <li>
+    <p>1、因为读取了监听的data 的属性，watch 的 watcher 被收集在 这个属性的 收集器中</p>
+  </li>
+  <li>
+    <p>2、在读取 data 属性的时候，发现设置了 deep 而且值是一个对象，会递归遍历这个值，把内部所有属性逐个读取一遍，于是 属性和 它的对象值内每一个属性 都会收集到 watch 的 watcher于是，无论对象嵌套多深的属性，只要改变了，会通知 相应的 watch 的 watcher 去更新，于是 你设置的 watch 回调就被触发了</p>
+  </li>
+</ul>
 
 
-                </article>
-                <div class="share">
-                    <div class="share-component"></div>
-                </div>
-                <div class="comment">
-                    
+    </article>
+    <div class="share">
+      <div class="share-component"></div>
+    </div>
+    <div class="comment">
+      
 
   
 
@@ -114,7 +195,7 @@
         <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
         <script>
         var gitalk = new Gitalk({
-            id: '/links/',
+            id: '/2020/06/23/vue-watch/',
             clientID: 'f1b37e802c634863604a',
             clientSecret: '3185e464e62d9eab0a432c06daebfa3a6af7e874',
             repo: 'baxibaba.github.io',
@@ -128,10 +209,10 @@
   
 
 
-                </div>
-            </div>
-            <div class="column one-third">
-                
+    </div>
+  </div>
+  <div class="column one-fourth">
+    
 <h3>Search</h3>
 <div id="site_search">
     <input type="text" id="search_box" placeholder="Search">
@@ -156,161 +237,24 @@ SimpleJekyllSearch({
 })
 </script>
 
-                <h3>My Popular Repositories</h3>
+    
 
+    
+<h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
+<div id="post-directory-module" class="mobile-hidden">
+  <section class="post-directory">
+  <!-- Links that trigger the jumping -->
+  <!-- Added by javascript below -->
+  <dl></dl>
+  </section>
+</div>
 
+<script src="http://localhost:4000/assets/js/jquery.toc.js"></script>
 
-<a href="https://github.com/baxibaba/one" target="_blank" class="card text-center">
-    <div class="thumbnail">
-        <div class="card-image geopattern" data-pattern-id="one">
-            <div class="card-image-cell">
-                <h3 class="card-title">
-                    one
-                </h3>
-            </div>
-        </div>
-        <div class="caption">
-            <div class="card-description">
-                <p class="card-text">ONE·一个|图文 微信小程序/开源代码</p>
-            </div>
-            <div class="card-text">
-                <span class="meta-info" title="1 stars">
-                    <span class="octicon octicon-star"></span> 1
-                </span>
-                <span class="meta-info" title="0 forks">
-                    <span class="octicon octicon-git-branch"></span> 0
-                </span>
-                <span class="meta-info" title="Last updated：2018-09-14 16:12:50 UTC">
-                    <span class="octicon octicon-clock"></span>
-                    <time datetime="2018-09-14 16:12:50 UTC">2018-09-14</time>
-                </span>
-            </div>
-        </div>
-    </div>
-</a>
-
-<a href="https://github.com/baxibaba/vue-learn" target="_blank" class="card text-center">
-    <div class="thumbnail">
-        <div class="card-image geopattern" data-pattern-id="vue-learn">
-            <div class="card-image-cell">
-                <h3 class="card-title">
-                    vue-learn
-                </h3>
-            </div>
-        </div>
-        <div class="caption">
-            <div class="card-description">
-                <p class="card-text">这是一个学习vue</p>
-            </div>
-            <div class="card-text">
-                <span class="meta-info" title="0 stars">
-                    <span class="octicon octicon-star"></span> 0
-                </span>
-                <span class="meta-info" title="0 forks">
-                    <span class="octicon octicon-git-branch"></span> 0
-                </span>
-                <span class="meta-info" title="Last updated：2018-11-29 09:28:36 UTC">
-                    <span class="octicon octicon-clock"></span>
-                    <time datetime="2018-11-29 09:28:36 UTC">2018-11-29</time>
-                </span>
-            </div>
-        </div>
-    </div>
-</a>
-
-<a href="https://github.com/baxibaba/VBlog" target="_blank" class="card text-center">
-    <div class="thumbnail">
-        <div class="card-image geopattern" data-pattern-id="VBlog">
-            <div class="card-image-cell">
-                <h3 class="card-title">
-                    VBlog
-                </h3>
-            </div>
-        </div>
-        <div class="caption">
-            <div class="card-description">
-                <p class="card-text">V部落，Vue+SpringBoot实现的多用户博客管理平台!</p>
-            </div>
-            <div class="card-text">
-                <span class="meta-info" title="0 stars">
-                    <span class="octicon octicon-star"></span> 0
-                </span>
-                <span class="meta-info" title="0 forks">
-                    <span class="octicon octicon-git-branch"></span> 0
-                </span>
-                <span class="meta-info" title="Last updated：2020-01-11 07:20:50 UTC">
-                    <span class="octicon octicon-clock"></span>
-                    <time datetime="2020-01-11 07:20:50 UTC">2020-01-11</time>
-                </span>
-            </div>
-        </div>
-    </div>
-</a>
-
-<a href="https://github.com/baxibaba/TS" target="_blank" class="card text-center">
-    <div class="thumbnail">
-        <div class="card-image geopattern" data-pattern-id="TS">
-            <div class="card-image-cell">
-                <h3 class="card-title">
-                    TS
-                </h3>
-            </div>
-        </div>
-        <div class="caption">
-            <div class="card-description">
-                <p class="card-text">TypeScripT</p>
-            </div>
-            <div class="card-text">
-                <span class="meta-info" title="0 stars">
-                    <span class="octicon octicon-star"></span> 0
-                </span>
-                <span class="meta-info" title="0 forks">
-                    <span class="octicon octicon-git-branch"></span> 0
-                </span>
-                <span class="meta-info" title="Last updated：2019-08-02 08:30:10 UTC">
-                    <span class="octicon octicon-clock"></span>
-                    <time datetime="2019-08-02 08:30:10 UTC">2019-08-02</time>
-                </span>
-            </div>
-        </div>
-    </div>
-</a>
-
-<a href="https://github.com/baxibaba/react-my-chat" target="_blank" class="card text-center">
-    <div class="thumbnail">
-        <div class="card-image geopattern" data-pattern-id="react-my-chat">
-            <div class="card-image-cell">
-                <h3 class="card-title">
-                    react-my-chat
-                </h3>
-            </div>
-        </div>
-        <div class="caption">
-            <div class="card-description">
-                <p class="card-text">this is react project</p>
-            </div>
-            <div class="card-text">
-                <span class="meta-info" title="0 stars">
-                    <span class="octicon octicon-star"></span> 0
-                </span>
-                <span class="meta-info" title="0 forks">
-                    <span class="octicon octicon-git-branch"></span> 0
-                </span>
-                <span class="meta-info" title="Last updated：2020-06-04 04:04:17 UTC">
-                    <span class="octicon octicon-clock"></span>
-                    <time datetime="2020-06-04 04:04:17 UTC">2020-06-04</time>
-                </span>
-            </div>
-        </div>
-    </div>
-</a>
-
-
-
-            </div>
-        </div>
-    </section>
-    <!-- /section.content -->
+  </div>
+</div>
+</section>
+<!-- /section.content -->
 
     <footer class="container">
         <div class="site-footer" role="contentinfo">

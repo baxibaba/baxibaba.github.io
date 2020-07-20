@@ -7,3 +7,6 @@ keywords: keyword1, keyword2
 ---
 
 Content here
+
+
+bundle exec jekyll serve --watch
