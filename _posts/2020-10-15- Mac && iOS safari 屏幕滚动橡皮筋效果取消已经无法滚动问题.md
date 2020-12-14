@@ -61,6 +61,7 @@ mounted() {
     //   console.log('结束', e);
     // },
 ```
+```js
   beforeDestroy() {
     let self = this;
     document.body.removeEventListener('touchstart', self.handleStart, { passive: false });
